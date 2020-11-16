@@ -1,0 +1,41 @@
+.row{
+    border: 5px solid yellow;
+    
+}
+.adiv{
+    height: 60px;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+
+}
+.bdiv{
+    height: 60px;
+    background-color: violet;
+    color: white;
+    text-align: center;
+}
+.cdiv{
+    height: 60px;
+    background-color: yellowgreen;
+    color: white;
+    text-align: center;
+}
+.ddiv{
+    height: 60px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+.ediv{
+    height: 60px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+}
+.fdiv{
+    height: 60px;
+    background-color: gold;
+    color: white;
+    text-align: center;
+}

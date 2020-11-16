@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    
+    <!-- ********************** Bootstrap Files **************************** -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- ****************** Font Awesome ******************* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <!-- ********************** CSS File ******************************* -->
+    <link rel="stylesheet" href="css/posstyle.css" />
+    <title>Orders</title>
+</head>
+
+<body>
+    <header>
+    <div class="container ">
+        <div class="clearfix">
+        <h1 class="float-left text-grey mt-2">Dashboard</h1>
+        <button class="btn btn-outline-dark float-right m-1 mt-3 btns" type="button" id="settingBtn"><i class="fa fa-gear fa-spin mr-1" aria-hidden="true"></i>Settings</button>
+
+    </div>
+    </header>
+
+    <section id="main" class="d-flex align-items-center">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4"></div>
+
+           
+                 <div class="col-sm-8 col-md-6 col-lg-4 shadow-sm bg-white">
+                    <div class=" d-flex justify-content-center  p-5 ">
+                    <div class="d-inline-block">
+                        <div class="d-flex flex-grow justify-content-center flex-column orderBtnDiv">
+                        <button class="btn btn-outline-dark p-3 m-1" type="button" id="newOrderBtn"><i class="fa fa-cart-plus fa-size fa-fw " aria-hidden="true"></i><br>New Order</button>
+                        <button class="btn btn-outline-dark m-1 btns" type="button" id="duesBtn"><i class="fa fa-pie-chart mr-1" aria-hidden="true"></i>Dues</button>
+                        </div>
+                    </div> 
+                    <div class="d-inline-block">
+                        <div class="d-flex flex-grow justify-content-center flex-column ">
+                        <button class="btn btn-outline-dark m-1 btns" type="button" id="stockBtn"><i class="fa fa-cubes mr-1" aria-hidden="true"></i>Stock</button>
+                        <button class="btn btn-outline-dark m-1 btns" type="button" id="reportsBtn"><i class="fa fa-bar-chart mr-1" aria-hidden="true"></i>Reports</button>
+                        <button class="btn btn-outline-dark m-1 btns " type="button" id="expencesBtn"><i class="fa fa-usd mr-1" aria-hidden="true"></i>Expenses</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center mt-5">GCT-POS-TalhaKhan&copy;Copyright-2020</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+  height: 100%;
+}
+body{
+  background-color: #F7F7F7;
+}
+.text-grey{
+	color: #6c757d
+}
+.purchaseSaleInput{
+    width: 48%;
+}
+.orderBtnDiv{
+	margin-top: 1px;
+	
+}
+
+.btns{
+  width: 150px;
+	box-shadow: 2px 2px 2px grey;
+}
+#newOrderBtn{
+	box-shadow: 2px 2px 2px grey;
+}
+#settingBtn{
+	width: 105px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#main{
+  height:calc(100% - 144px);
+}
+
+@media(max-width : 792px){
+  #main{
+    height: auto;
+  }
+}
