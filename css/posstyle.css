@@ -19,11 +19,20 @@ body{
   font-size: 30px;
 
 }
-
+.btn-voilet{
+  background-color:#6958B5;
+  color: #fff;
+}
+.btn-voilet:hover{
+  background-color:#5844b4;
+  color: #fff;
+}
 .btns{
+  
   width: 150px;
   font-size: 22px;
   height: 64px;
+  color: #fff;
 	box-shadow: 2px 2px 2px grey;
 }
 #newOrderBtn{
