@@ -9,6 +9,10 @@ html , body{
 body{
   background-color: #F7F7F7;
 }
+.form-control:focus {
+  border-color: rgb(105, 88, 181);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(105, 88, 181, 0.6);
+}
 .text-grey{
 	color: #6c757d
 }
@@ -26,6 +30,9 @@ body{
 .btn-voilet:hover{
   background-color:#5844b4;
   color: #fff;
+}
+.text-voilet{
+  color:#6958B5 ;
 }
 .btns{
   
