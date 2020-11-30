@@ -41,7 +41,7 @@
                     <div class=" d-flex justify-content-center  p-5 ">
                         <div class="d-inline-block">
                             <div class="d-flex flex-grow justify-content-center flex-column orderBtnDiv">
-                                <button class="btn  btn-success text-white m-1" type="button"
+                                <button data-toggle="modal" data-target="#newOrderModal" class="btn  btn-success text-white m-1" type="button"
                                     id="newOrderBtn"><i class="fa fa-cart-plus  fa-size fa-fw "
                                         aria-hidden="true"></i><br>New
                                     Order</button>
@@ -66,6 +66,123 @@
             </div>
         </div>
     </section>
+
+    <!-- New Order Modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button> -->
+
+<div class="modal fade" id="newOrderModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="exampleModalLongTitle">
+                            New Order
+                        </h5>
+                       
+                        <div>
+                            <button class="btn"><i class="fa fa-minus " aria-hidden="true"></i></button>
+
+                            <button class="btn"><i class="fa fa-times" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i></button>
+                        </div>
+                       
+                    </div>
+                    <div class="modal-body text-center">
+                        <section class="">
+                            <div class="row no-gutters">
+                                <div class="col-xl-9 col-lg-8 col-md-6 mb-3 mb-md-0 pr-1">
+                                   
+                                    <form action="">
+                                        <div class="input-group-prepend ">
+                                            <label class="input-group-text bg-white border-right-0" for="search"><i class="fa fa-search"></i></label>
+                                        
+                                          <input type="text" class="form-control border-left-0" placeholder="Search items" >
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <div class="col-xl-3 col-lg-4 col-md-6 text-center d-flex ">
+                                    <button class="btn border font-weight-normal modalAddBtn text-grey "><i class="fa fa-plus font-weight-normal mr-2 text-grey"></i>Add</button>
+
+                                    <button class="btn border btn-voilet w-50 font-weight-normal flex-grow-1"><i class="fa fa-save font-weight-normal mr-2"></i>Save</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="paper rounded px-4 py-4 mt-2 shadow-sm">
+                            <h3 class="text-left mt-0 ">Invoice</h3>
+
+                            
+                            <table class="table table-sm ">
+                                <thead>
+                                    <tr>
+                                      <th class="fonttbl text-center">#</th>
+                                      <th width="50%" class=" fonttbl  text-left">Item Name</th>
+                                      <th class="fonttbl  text-center">Unit Cost</th>
+                                      <th class="fonttbl  text-center">Quantity</th>
+                                      <th class="fonttbl  text-center">Discount</th>
+                                      <th class="fonttbl  text-center">Amount</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-left">Item No 1</td>
+                                      <td>500.00</td>
+                                      <td>2</td>
+                                      <td>20.00</td>
+                                      <td>980</td>
+                                    </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td class="text-left">Item No 2</td>
+                                        <td>500.00</td>
+                                        <td>2</td>
+                                        <td>20.00</td>
+                                        <td>980</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td class="text-left">Item No 3</td>
+                                        <td>500.00</td>
+                                        <td>2</td>
+                                        <td>20.00</td>
+                                        <td>980</td>
+                                      </tr>
+                                </tbody>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <td class="text-right">Subtotal</td>
+                                    <td class="text-center">20.00</td>
+                                    <td class="text-center">1460.00</td>
+                                </tr>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="4"></td>
+                                    <td class="text-center font-weight-bold">Total PKR</td>
+                                    <td class="text-center font-weight-bold">1460.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="border-0"></td>
+                                    <td class="text-center font-weight-bold">Amount Paid</td>
+                                    <td class="text-center font-weight-bold">1460.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="border-0"></td>
+                                    <td class="text-center font-weight-bold">Balance Due</td>
+                                    <td class="text-center font-weight-bold">00.00</td>
+                                </tr>
+                            </tfoot>
+                                </table>
+                            
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
