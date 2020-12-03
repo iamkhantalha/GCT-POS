@@ -9,7 +9,8 @@
 
     <!-- ********************** Bootstrap Files **************************** -->
     <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- ****************** Font Awesome ******************* -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -68,11 +69,8 @@
     </section>
 
     <!-- New Order Modal -->
-    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button> -->
 
-<div class="modal fade" id="newOrderModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="newOrderModal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header border-0">
@@ -80,10 +78,13 @@
                             New Order
                         </h5>
                        
-                        <div>
-                            <button class="btn"><i class="fa fa-minus " aria-hidden="true"></i></button>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn minimize"><i class=" fa fa-window-minimize " aria-hidden="true"></i></button>
+                            
+                            <button class="btn maximize d-none"><i class="  fa fa-window-maximize  " aria-hidden="true"></i></button>
 
                             <button class="btn"><i class="fa fa-times" data-dismiss="modal" aria-label="Close" aria-hidden="true"></i></button>
+
                         </div>
                        
                     </div>
@@ -91,30 +92,29 @@
                         <section class="">
                             <div class="row no-gutters">
                                 <div class="col-xl-9 col-lg-8 col-md-6 mb-3 mb-md-0 pr-1">
+                                    <form action="" id="addProduct" >
                                    
-                                    <form action="">
                                         <div class="input-group-prepend ">
-                                            <label class="input-group-text bg-white border-right-0" for="search"><i class="fa fa-search"></i></label>
+                                            <label id="searchLabel" class="input-group-text bg-white border-right-0" for="search"><i class="fa fa-search"></i></label>
                                         
-                                          <input type="text" class="form-control border-left-0" placeholder="Search items" >
+                                          <input id="search" type="text" class="form-control border-left-0 mr-1" placeholder="Search items" >
                                         </div>
-
+                                    </div>
+                                    
+                                    <div class="col-xl-3 col-lg-4 col-md-6 text-center d-flex ">
+                                        <button  type="submit
+                                        " class="btn border font-weight-normal modalAddBtn text-grey mr-1 "><i class="fa fa-plus font-weight-normal mr-2 text-grey"></i>Add</button>
+                                        
+                                        <button class="btn border btn-voilet w-50 font-weight-normal flex-grow-1"><i class="fa fa-save font-weight-normal mr-2"></i>Save</button>
                                     </form>
                                 </div>
-
-                                <div class="col-xl-3 col-lg-4 col-md-6 text-center d-flex ">
-                                    <button class="btn border font-weight-normal modalAddBtn text-grey "><i class="fa fa-plus font-weight-normal mr-2 text-grey"></i>Add</button>
-
-                                    <button class="btn border btn-voilet w-50 font-weight-normal flex-grow-1"><i class="fa fa-save font-weight-normal mr-2"></i>Save</button>
-                                </div>
                             </div>
-                        </section>
+                        
+                    </section>
 
-                        <section class="paper rounded px-4 py-4 mt-2 shadow-sm">
+                        <section class="paper rounded px-4 py-2 mt-2 shadow-sm">
                             <h3 class="text-left mt-0 ">Invoice</h3>
-
-                            
-                            <table class="table table-sm ">
+                             <table id="invoiceTable" class="table table-sm ">
                                 <thead>
                                     <tr>
                                       <th class="fonttbl text-center">#</th>
@@ -123,60 +123,43 @@
                                       <th class="fonttbl  text-center">Quantity</th>
                                       <th class="fonttbl  text-center">Discount</th>
                                       <th class="fonttbl  text-center">Amount</th>
+                                      <th class="fonttbl  text-center">Delete</th>
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <th scope="row">1</th>
-                                      <td class="text-left">Item No 1</td>
-                                      <td>500.00</td>
-                                      <td>2</td>
-                                      <td>20.00</td>
-                                      <td>980</td>
-                                    </tr>
                                       <tr>
-                                        <th scope="row">2</th>
-                                        <td class="text-left">Item No 2</td>
-                                        <td>500.00</td>
-                                        <td>2</td>
-                                        <td>20.00</td>
-                                        <td>980</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">3</th>
-                                        <td class="text-left">Item No 3</td>
-                                        <td>500.00</td>
-                                        <td>2</td>
-                                        <td>20.00</td>
-                                        <td>980</td>
+
+                                          
                                       </tr>
                                 </tbody>
+                                <tfoot>
                                 <tr>
                                     <td colspan="3"></td>
                                     <td class="text-right">Subtotal</td>
                                     <td class="text-center">20.00</td>
                                     <td class="text-center">1460.00</td>
+                                    <td></td>
                                 </tr>
-                                <tfoot>
                                 <tr>
                                     <td colspan="4"></td>
                                     <td class="text-center font-weight-bold">Total PKR</td>
                                     <td class="text-center font-weight-bold">1460.00</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td colspan="4" class="border-0"></td>
                                     <td class="text-center font-weight-bold">Amount Paid</td>
                                     <td class="text-center font-weight-bold">1460.00</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td colspan="4" class="border-0"></td>
                                     <td class="text-center font-weight-bold">Balance Due</td>
                                     <td class="text-center font-weight-bold">00.00</td>
+                                    <td></td>
                                 </tr>
                             </tfoot>
                                 </table>
-                            
-
                         </section>
                     </div>
                 </div>
@@ -190,8 +173,105 @@
         </div>
     </footer>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
+
+
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-4-autocomplete/dist/bootstrap-4-autocomplete.min.js" crossorigin="anonymous"></script>
+    
+    
+    <script>
+        // <!-- Bootstrap Autocomplete Script (JSON) -->
+
+        var src = {
+            "iPhone ORG Charger": 1,
+            "Samsung ORG Cable": 2,
+            "Samsung Earbuds ": 3,
+            "Huawei Wrest Band": 4,
+            "Apple Watch Series 5": 5,
+            "Realme Headphones": 6,
+            "Infinix Charger": 7,
+        }
+    
+        function onSelectItem(item, element) {
+            $('#output').html(
+                'Element <b>' + $(element).attr('id') + '</b> was selected<br/>' +
+                '<b>Value:</b> ' + item.value + ' - <b>Label:</b> ' + item.label
+            );
+        }
+    
+        $('#search').autocomplete({
+            source: src,
+            onSelectItem: onSelectItem,
+            highlightClass: 'text-danger',
+            treshold: 2
+        });
+        // <!-- Bootstrap Autocomplete Script (JSON) ENDS -->
+
+        // <!-- Minimize Modal -->
+        $('.minimize').on("click", function(){
+            $('.modal-body').addClass("d-none");
+            $('.modal-content').css("width","230px");
+            $('.modal-dialog').css({"position":"absolute", "bottom":"0"});
+            $('.minimize').addClass("d-none");
+            $('.maximize').removeClass("d-none");
+            $('.minimize').removeClass("modal");
+        })
+
+            // Maximize Modal
+        $('.maximize').on("click", function(){
+            $('.modal-body').removeClass("d-none");
+            $('.modal-content').removeAttr("style");
+            $('.modal-dialog').removeAttr("style");
+            $('.minimize').removeClass("d-none");
+            $('.maximize').addClass("d-none");
+            
+        });
+
+
+        // Add Item To Invoice List
+
+        $('#addProduct').on("submit", function(e){
+            e.preventDefault();
+            if ($("#search").val().length > 2){
+                
+                $('#invoiceTable').find("tbody").append(`
+                <tr class="text-center">
+                    <th scope="row">1</th>
+                    <td class="text-left">`+$("#search").val()+`</td>
+                    <td class="unit-cost" contenteditable = "true">200</td>
+                    <td class="quantity" contenteditable = "true">2</td>
+                    <td class="discount" contenteditable = "true">0.00</td>
+                    <td class="totalAmount"></td>
+                    <td class=""><button title="Delete" class="btn p-0 delete-item text-danger"><i class="fa fa-trash text-danger" aria-hidden="true"></i></button></td>
+                </tr>
+                
+            `);
+            this.reset();
+        } else {
+                alert('Please Select an item')
+            }
+        });
+        
+        // Delete Item
+        $("tbody").on("click", ".delete-item", function(){
+            $(this).closest("tr").remove();
+            
+        });
+
+        // Pricing
+        $("tbody").on("input",".discount", function(){
+            let unitCost = parseInt($(this).closest("tr").find(".unit-cost").text());
+            let discount = parseInt(0+$(this).text());
+                $($(this).closest("tr")).find(".totalAmount").text((unitCost - discount));
+            } );
+            
+
+    </script>
+
 </body>
 
 </html>
